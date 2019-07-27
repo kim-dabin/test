@@ -21,5 +21,10 @@ public class IndexController {
 		 * */			
 	}
 	
+	@RequestMapping("/test.gm")
+	public void atest() {
+		
+	}
+	
 	
 }
