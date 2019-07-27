@@ -31,8 +31,9 @@ $("#form").submit(function () {
 		type:"post",
 		dataType:"json",
 		data:{no: no},
-		error :function(){
+		error :function(xhr,error,code){
 			alert("error!");
+			console.log(xhr.responseText);
 		},
 		success:function(json){
 			
@@ -41,7 +42,6 @@ $("#form").submit(function () {
 			$("<li>").text("number: "+json.no+"/ title: "+json.name)
 			.appendTo("#movieList");
 		}
-	
 		
 	});
 	
